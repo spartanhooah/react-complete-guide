@@ -1,6 +1,6 @@
-import ExpenseList from "./components/ExpenseList";
+import ExpenseList from "./components/expenses/ExpenseList";
 
-function App() {
+const App = () => {
   const expenses = [
     {
       id: "e1",
@@ -22,7 +22,7 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-  
+
   return (
     <div>
       <h2>Let's get started!</h2>
