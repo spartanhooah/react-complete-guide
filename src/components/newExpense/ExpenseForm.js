@@ -17,6 +17,7 @@ const ExpenseForm = (props) => {
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
     // How to update a single piece of state when when handling state as an object
+    // Also how to update based on existing state.
     // setUserInput((previousState) => {
     //   return {
     //     ...userInput,
@@ -39,7 +40,7 @@ const ExpenseForm = (props) => {
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: new Date(enteredDate),
+      date: new Date(enteredDate + "T00:00:00"),
     };
 
     props.onSaveExpenseData(expenseData);
